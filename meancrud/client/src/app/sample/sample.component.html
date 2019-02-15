@@ -1,0 +1,24 @@
+<p>
+  sample works!
+</p>
+<input type="button" value="get data from server" (click)="getdata()"/>
+this is {{jsn.msg}}
+
+<input type="button" value="get data from table" (click)="gettable()"/>
+<input type="button" value="add d" (click)="add()"/>
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>salary</th>
+  </tr>
+  <tr *ngFor="let d of list[0]">
+<td>{{d.id}}</td>
+<td>{{d.name}}</td>
+<td>{{d.salary}}</td>
+  </tr>
+</table>
+
+ID:<input type="text" [(ngModel)]="id">
+NAME:<input type="text" [(ngModel)]="name">
+SALARY:<input type="text" [(ngModel)]="salary">

@@ -13,7 +13,8 @@ import{RouterModule,Route, Routes} from '@angular/router'
 import{RoutService} from '../app/myservices/rout.service'
 import{FootService} from '../app/myservices/foot.service'
 import{DateService} from '../app/myservices/date.service'
-import { from } from 'rxjs';
+import {CookieService} from 'angular2-cookie/services/cookies.service'
+
 const appRoutes:Routes=[
   {path:"",component:ViewemployeeComponent},
   {path:"new",component:NewemployeeComponent},
@@ -35,7 +36,7 @@ const appRoutes:Routes=[
     BrowserModule,FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [RoutService,FootService,DateService],
+  providers: [RoutService,FootService,DateService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

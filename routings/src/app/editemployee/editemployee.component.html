@@ -1,3 +1,25 @@
 <p>
   editemployee works!
 </p>
+value from {{value}}
+<button type="button" (click)=setvalue()>set cookie</button>
+<button type="button" (click)=getvalue()>get cookie</button>
+<button type="button" (click)=setlocal()>setlocalstorage</button>
+<button type="button" (click)=getlocal()>getlocalstorage</button>
+<button type="button" (click)=setsession()>setsession</button>
+<button type="button" (click)=getsession()>getsession</button>
+name:<input type="text" [(ngModel)]="name"/>
+breed:<input type="text" [(ngModel)]="breed"><br>
+<button type="button" (click)=set()>set</button>
+<button type="button" (click)=get()>get</button>
+<table border="3">
+  <tr>
+    
+    <th>NAME</th>
+    <th>BREED</th>
+  </tr>
+  <tr >
+    <td>{{item.name}}</td>
+    <td>{{item.breed}}</td>
+  </tr>
+</table>
